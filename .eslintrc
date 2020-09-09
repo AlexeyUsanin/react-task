@@ -1,0 +1,84 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "prettier",
+    "prettier/react",
+    "plugin:react/recommended"
+  ],
+  "plugins": ["prettier", "react", "react-hooks"],
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "ecmaFeatures": {
+      "experimentalDecorators": true,
+      "jsx": true
+    }
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["~", "./src"]
+        ],
+        "extensions": [".js", ".jsx", ".json"]
+      }
+    }
+  },
+  "env": {
+    "jest": true,
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "camelcase": 0,
+    "arrow-parens": [2, "as-needed"],
+    "arrow-body-style": ["error", "as-needed"],
+    "no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "no-nested-ternary": "warn",
+    "no-param-reassign": "warn",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1
+      }
+    ],
+    "no-extra-parens": 0,
+    "no-restricted-syntax": ["off"],
+    "no-shadow": "warn",
+    "prettier/prettier": "error",
+    "import/order": "warn",
+    "import/extensions": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": [0, "never"],
+    "react/jsx-closing-tag-location": "error",
+    "react/jsx-no-duplicate-props": [2, {
+      "ignoreCase": false
+    }],
+    "react/jsx-key": "error",
+    "react/prop-types": [
+      "warn",
+      {
+        "skipUndeclared": true
+      }
+    ],
+    "react/prefer-stateless-function": "warn",
+    "react/no-array-index-key": "warn",
+    "react/destructuring-assignment": [1, "always"],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/jsx-props-no-spreading": ["off"],
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}
